@@ -8,7 +8,6 @@ This project is a lightweight tool designed to automatically evaluate written co
 
 ## ✨ Features
 
-- ✅ Automated scoring from 0% to 100%
 - ✅ Grammar and spelling detection
 - ✅ Evaluation of clarity and tone
 - ✅ Feedback generation (optional)
@@ -23,24 +22,17 @@ This project is a lightweight tool designed to automatically evaluate written co
 ## ⚙️ Technologies Used
 
 - Python 3.10+
-- spaCy / TextBlob / NLTK (choose your NLP library)
-- Flask or Streamlit (for web interface, optional)
+- NLTK 
+- Python shiny
 - Pandas & Regex (for text processing)
 
 ## 🧠 How It Works
 
 The system assigns a score based on:
-- **Grammar** (25%)
-- **Spelling** (20%)
-- **Clarity & Coherence** (25%)
-- **Relevance & Tone** (20%)
-- **Structure & Formatting** (10%)
+- **Grammar Error** min(grammar_errors * 2.5, 30)
+- **Default Score for all submission** (55%)
+- **keyword_hits** min(keyword_hits * 2, 20)
+- **vocab_score** min(vocab_score * 15, 15)
+- **Word count** (if word count < 50 :(-40%), if word count > 50 < 100: (5%), if word count >100 :(10%)
 
-Each section is analyzed and combined into a weighted final score between **0% and 100%**.
 
-## 🛠️ Installation
-
-```bash
-git clone https://github.com/yourusername/communication-test-grader.git
-cd communication-test-grader
-pip install -r requirements.txt
