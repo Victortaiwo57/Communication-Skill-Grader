@@ -35,4 +35,5 @@ The system assigns a score based on:
 - **vocab_score** min(vocab_score * 15, 15)
 - **Word count** (if word count < 50 :(-40%), if word count > 50 < 100: (5%), if word count >100 :(10%)
 
-
+### 🍜 Case Study 
+<img src="https://github.com/Victortaiwo57/Communication-Skill-Grader/blob/main/Communication%20test.png" alt="Image" width="500" height="520">
