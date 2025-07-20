@@ -1,3 +1,0 @@
-shiny
-language-tool-python
-nltk
